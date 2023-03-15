@@ -1,12 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="en"  data-theme="retro">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <title>Home</title>
 </head>
 <body>
-    <h1>kantin</h1>
+    <nav>
+        <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
+        <div class="flex-1 px-2 mx-2">
+        <div class="items-stretch hidden lg:flex">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl">Kantin</a>
+          
+            <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
+                  Home
+                </a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
+                  Produk
+                </a> 
+    
+        </div>
+        </div>
+        </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                <span class="badge badge-sm indicator-item"></span>
+              </div>
+            </label>
+            <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+              <div class="card-body">
+                <span class="font-bold text-lg">Keranjang Belanja</span>
+                <span class="text-info">Total </span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">Check Out</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="kantin.jpg" />
+              </div>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between" href="profil.html">
+                  Profile
+                </a>
+              </li>
+              
+              <li><a href="login">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div>
+        <h1>
+            <center>Selamat Datang</center>
+        </h1>
+    </div>
+       
+    <div class="container">
+        <div class="flex justify-center gap-5">
+            <div class="card">
+              <div class="card-body">
+                <div class="carousel carousel-end rounded-box">
+                  <div class="carousel rounded-box w-96">
+                    <div class="carousel-item w-1/2">
+                      <img id="seblak" src="gambar/ramyun.jpg" class="w-full" />
+                    </div> 
+                    <div class="carousel-item w-1/2">
+                      <img id="bungeoppang" src="gambar/bungeoppang.jpg" class="w-full" />
+                    </div> 
+                    <div class="carousel-item w-1/2">
+                      <img id="ramyun" src="gambar/seblak-makaroni-1.jpg" class="w-full" />
+                    </div> 
+                    <div class="carousel-item w-1/2">
+                      <img id="sushi" src="gambar/sushi.jpg" class="w-full" />
+                    </div> 
+                    <div class="carousel-item w-1/2">
+                      <img id="teok" src="gambar/teokpoki.jpg" class="w-full" />
+                    </div> 
+                    <div class="carousel-item w-1/2">
+                      <img id="corn" src="gambar/cordog2.jpg" class="w-full" />
+                    </div> 
+                  </div>
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Menu</h2>
+                    <p>Serba Goceng</p>
+                    <div class="card-actions justify-end">
+                        <a class="btn btn-primary" href="product.html">Jelajahi Menu</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
 </body>
 </html>

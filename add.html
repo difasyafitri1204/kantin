@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <title>Tambah Produk</title>   
+</head>
+<body>
+  <nav>
+      <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
+        <div class="flex-1 px-2 mx-2">
+          <div class="items-stretch hidden lg:flex">
+              <div class="flex-1">
+                  <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>
+                  
+                   
+              </div>
+            </div>
+        </div>
+        <div class="flex-none">
+          <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
+            Home
+          </a> 
+          <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
+            Produk
+          </a> 
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <!-- <img src="kantin.jpg" /> -->
+              </div>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between" href="profil.html"> Profile </a>
+              </li>
+              <li><a href="index.html">Logout</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+</nav>
+        <div class="container mx-auto">
+            <div class="flex justify-center gap-5">
+                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <form id="form-Add" action="" onsubmit="event.preventDefault(); saveAdd(this)" >
+                            <input name="index" type="hidden" value="-1">
+                            <div  style="padding-bottom: 10px;">
+                                <label for="names">
+                                    <span class="label-text">names Add</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="text" id="names" name="names" class="input input-primary input-bordered">
+                            </div>
+                            <div>
+                                <label for="price">price Product</label>
+                            </div>
+                            <div>
+                                <input type="number" id="price" name="price" class="input input-primary input-bordered" >
+                            </div>
+                            <div>
+                                <label for="pictures">Link pictures Product</label>
+                            </div>  
+                            <div>
+                                <input type="text" id="pictures" name="pictures" class="input input-primary input-bordered">
+                            </div>
+                            <div style="padding-top: 10px;">
+                                <button id="btn-save-Add" class="btn btn-accent btn-active">save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-body">
+                <div class="grid grid-flow-col auto-cols-max">
+                  <div id="List-Add"></div>
+                  </div>   
+                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                  </div>
+                  </div>
+            </div>
+            </div>
+        </div>
+        <script src="add.js"></script>
+</body>
+</html>

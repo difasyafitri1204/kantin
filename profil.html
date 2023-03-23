@@ -10,34 +10,14 @@
     <title>Profil</title>
 </head>
 <body >
-    <div class="container-fluid">
-        <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
-            <div class="flex-none px-2 mx-2"></div> 
-        <div class="flex-1 px-2 mx-2">
-        <div class="items-stretch hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-              <a class="btn btn-ghost normal-case text-xl">Kantin</a>
-          
-              <a class="btn btn-ghost btn-sm rounded-btn" href="Home.html">
-                    Home
-                  </a> 
-              <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
-                    Produk
-                  </a> 
-              <a class="btn btn-ghost btn-sm rounded-btn" href="contact.html">
-                    Contact us
-                  </a> 
-                
-        </div>
-        </div> 
-        </div>
+    
         <div class="container mx-auto">
             <div class="flex justify-center gap-5">
                 <div class="card card-compact w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
-                        <form id="form-Transaction" action="" onsubmit="event.preventDefault(); saveTransaction(this)">
+                        <form id="form-Profil" action="" onsubmit="event.preventDefault(); saveProfil(this)">
                                 <input name="index" type="hidden" value="-1">
-                            <div>
+                            <!-- <div>
                                 <label for="choose_Consumer">Consumer</label>
                             </div>
                             <div>
@@ -48,58 +28,42 @@
                             </div>
                             <div id="app">
                                 <select class="select select-primary w-full max-w-xs" id="list-option" > <option value="">select product</option></select>
-                            </div>
+                            </div> -->
                                     
                             <div>
-                                <label for="product">names Product</label>
+                                <label for="name">Nama</label>
                             </div>
                             <div>
-                                <input type="text" id="product" name="product" class="input input-primary input-bordered" readonly>
+                                <input type="text" id="name" name="name" class="input input-primary input-bordered" >
                             </div>
                             <div>
-                                <label for="price">price Product</label>
+                                <label for="email">Email</label>
                             </div>
                             <div>
-                                <input type="number" id="price" name="price" class="input input-primary input-bordered" onkeyup="save();" >
+                                <input type="text" id="email" name="email" class="input input-primary input-bordered" >
                             </div>
                             <div>
-                                <label for="stock">stock Product</label>
+                                <label for="password">password name</label>
                             </div>
                             <div>
-                                <input type="number" id="stock" name="stock" class="input input-primary input-bordered"readonly>
+                                <input type="password" id="password" name="password" class="input input-primary input-bordered">
                             </div>
                             <div>
                                 <label for="pictures">Link pictures Product</label>
                             </div>  
                             <div>
-                                <input type="text" id="pictures" name="pictures" class="input input-primary input-bordered"readonly>
+                                <input type="file" id="pictures" name="pictures" class="input input-primary input-bordered">
                             </div>
                             <div>
-                                <label for="amount">amount</label>
+                                <label for="no">no</label>
                             </div>  
                             <div>
-                                <input type="number" id="amount" name="amount" class="input input-primary input-bordered" onkeyup="save();" >
-                            </div>
-                            <div>
-                                <label for="total">Total price</label>
-                            </div>  
-                            <div>
-                                <input type="number" id="total" name="total" class="input input-primary input-bordered" readonly onkeyup="save();">
-                            </div>
-                            <div>
-                                <label for="cash">cash</label>
-                            </div>  
-                            <div>
-                                <input type="text" id="cash" name="cash" class="input input-primary input-bordered" onkeyup="save();" >
-                            </div>
-                            <div>
-                                <label for="changes">changes</label>
-                            </div>  
-                            <div>
-                                <input type="text" id="changes" name="changes" class="input input-primary input-bordered" onkeyup="save();">
+                                <input type="number" id="no" name="no" class="input input-primary input-bordered" onkeyup="save();" >
                             </div>
                             <div style="padding-top: 10px;">
-                                <button id="btn-save-Transaction" class="btn btn-accent btn-active">save</button>
+                                <button id="btn-save-Profil" class="btn btn-accent btn-active">save</button>
+                                <a href="home.html" id="" class="btn btn-accent btn-active">Keluar</a>
+                                
                             </div>
                             <!-- <h1 id="histori"></h1> -->
                         </form>
@@ -108,14 +72,18 @@
                     <div class="card card-compact w-96 bg-base-100 shadow-xl">
                         <div class="card-body">
                             <h1 class="card-tittle">Histori Penjualan</h1>
-                            <div id="List-Transaction"></div>
+                            <div id="List-Profil"></div>
                         </div>
                     </div>
                 </div>
             </div>
     </div>
-
-    <script type="text/javascript" src="Transaction.js"> </script>
+    <div class="grid grid-flow-col auto-cols-max">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+      </div>
+    <script type="text/javascript" src="profil.js"> </script>
 </body>
 </html>
 

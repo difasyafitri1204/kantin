@@ -9,26 +9,29 @@
     <title>Home</title>
 </head>
 <body>
-  <nav>
-      <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
+    <nav>
+        <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
         <div class="flex-1 px-2 mx-2">
-          <div class="items-stretch hidden lg:flex">
-              <div class="flex-1">
-                  <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>
-                  
-                  
-              </div>
-            </div>
+        <div class="items-stretch hidden lg:flex">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl">Kantin</a>
+          
+            <a class="btn btn-ghost btn-sm rounded-btn" href="Home.html">
+                  Home
+                </a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
+                  Produk
+                </a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" href="contact.html">
+                  Contact us
+                </a> 
+    
+        </div>
+        </div>
         </div>
         <div class="flex-none">
-          <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
-            Home
-          </a> 
-          <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
-            Produk
-          </a> 
-          <!-- <div class="dropdown dropdown-end">
-              <label tabindex="0" class="btn btn-ghost btn-circle">
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
               <div class="indicator">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                 <span class="badge badge-sm indicator-item"></span>
@@ -42,27 +45,32 @@
                   <button class="btn btn-primary btn-block">Check Out</button>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
-                <!-- <img src="kantin.jpg" /> -->
+                <img src="kantin.jpg" />
               </div>
             </label>
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               <li>
-                <a class="justify-between" href="profil.html"> Profile</a>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
               </li>
-              
-              <li><a href="index.html">Logout</a></li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
             </ul>
           </div>
+        </div>
       </div>
-    </div>
-  </nav>
-    <div>   
-            <center><h1>Selamat Datang</h1></center>
+    </nav>
+    <div>
+        <h1>
+            <center>Selamat Datang</center>
+        </h1>
     </div>
        
     <div class="container">
@@ -70,33 +78,35 @@
             <div class="card">
               <div class="card-body">
                 <div class="carousel carousel-end rounded-box">
-                  <div class="carousel rounded-box w-96" id="list-home">
+                  <div class="carousel rounded-box w-96">
                     <div class="carousel-item w-1/2">
-                       <img id="seblak" src="img/ramyun.jpg" class="w-full" />
-                    </div> 
-                     <div class="carousel-item w-1/2">
-                      <img id="bungeoppang" src="img/bungeoppang.jpg" class="w-full" />
+                      <img id="seblak" src="seblak-makaroni-1.jpg" class="w-full" />
                     </div> 
                     <div class="carousel-item w-1/2">
-                      <img id="ramyun" src="img/seblak-makaroni-1.jpg" class="w-full" />
+                      <img id="bungeoppang" src="bungeoppang.jpg" class="w-full" />
                     </div> 
                     <div class="carousel-item w-1/2">
-                      <img id="sushi" src="img/sushi.jpg" class="w-full" />
+                      <img id="ramyun" src="ramyun.jpg" class="w-full" />
                     </div> 
                     <div class="carousel-item w-1/2">
-                      <img id="teok" src="img/teokpoki.jpg" class="w-full" />
+                      <img id="sushi" src="sushi.jpg" class="w-full" />
                     </div> 
                     <div class="carousel-item w-1/2">
-                      <img id="corn" src="img/cordog2.jpg" class="w-full" />
+                      <img id="teok" src="teokpoki.jpg" class="w-full" />
                     </div> 
+                    <div class="carousel-item w-1/2">
+                      <img id="corn" src="cordog2.jpg" class="w-full" />
+                    </div> 
+                    <!-- <div class="carousel-item w-1/2">
+                      <img id="ice" src="ice.jpeg" class="w-full" />
+                    </div> -->
                   </div>
                 </div>
                 <div class="card-body">
                     <h2 class="card-title">Menu</h2>
                     <p>Serba Goceng</p>
                     <div class="card-actions justify-end">
-                        <a class="btn btn-primary" href="product.html">Jelajahi Menu</a>
-                        
+                        <button class="btn btn-primary">Jelajahi Menu</button>
                     </div>
                 </div>
             </div>

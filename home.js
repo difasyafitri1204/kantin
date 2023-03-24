@@ -21,3 +21,16 @@
 // }
 
 // ListHome.showListHome();
+function logout {
+    IndexLogout.logout();
+}
+const IndexLogout = {
+    logout: function() {
+        localStorage.removeItem("indexLogin");
+    }
+}
+// function copy(obj) {
+//     return JSON.parse(JSON.stringify(obj));
+// }
+
+// ListAdd.showListAdd();

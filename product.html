@@ -9,110 +9,165 @@
     <title>Home</title>
 </head>
 <body>
-    <nav>
-        <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
-        <div class="flex-1 px-2 mx-2">
+  <nav>
+    <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
+      <div class="flex-1 px-2 mx-2">
         <div class="items-stretch hidden lg:flex">
-        <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl">Kantin</a>
-          
-            <a class="btn btn-ghost btn-sm rounded-btn" href="Home.html">
-                  Home
-                </a> 
-            <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
-                  Produk
-                </a> 
-            <a class="btn btn-ghost btn-sm rounded-btn" href="contact.html">
-                  Contact us
-                </a> 
-    
-        </div>
-        </div>
-        </div>
-        <div class="flex-none">
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle">
-              <div class="indicator">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                <span class="badge badge-sm indicator-item"></span>
-              </div>
-            </label>
-            <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
-              <div class="card-body">
-                <span class="font-bold text-lg">Keranjang Belanja</span>
-                <span class="text-info">Total </span>
-                <div class="card-actions">
-                  <button class="btn btn-primary btn-block">Check Out</button>
-                </div>
-              </div>
+            <div class="flex-1">
+                <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>     
             </div>
           </div>
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-              <div class="w-10 rounded-full">
-                <img src="kantin.jpg" />
-              </div>
-            </label>
-            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                <a class="justify-between">
-                  Profile
-                  <span class="badge">New</span>
-                </a>
-              </li>
-              <li><a>Settings</a></li>
-              <li><a>Logout</a></li>
-            </ul>
+      </div>
+      <div class="flex-none">
+        <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
+          Home
+        </a> 
+        <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
+          Produk
+        </a> 
+        <a class="btn btn-ghost btn-sm rounded-btn" href="logout.html">
+         Logout
+        </a> 
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+            </div>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li>
+              <a class="justify-between" href="profil.html"> Profile </a>
+            </li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</nav>
+    <div>
+      <div class="container mx-auto">
+        <div class="flex justify-center gap-5">
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <center>
+                <div class="card-body">
+                  <div style="padding-top: 10px;">
+                      <a href="add.html"><button id="btn-save-product" class="btn btn-accent btn-active" onclick="myProduct">Tambah</button></a>
+                  </div>
+            </div>
+              </center>
+            </div>
+
+            
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <center>
+            <div class="carousel-item w-1/2">
+              <img id="ramyun" src="https://glebekitchen.com/wp-content/uploads/2018/08/koreanramenfront.jpg" class="w-full" />
+            </div>  
+          </center>
+        <div class="card-body">
+          <h2 class="card-title">
+            ramyun
+            <div class="badge badge-secondary">NEW</div>
+          </h2>
+          <div class="card-actions justify-end">
+            <div class="btn btn-accent btn-active">Beli</div> 
+            <div class="btn btn-accent btn-active">Keranjang</div>
           </div>
         </div>
       </div>
-    </nav>
-    <div>
-        <h1>
-            <center>Selamat Datang</center>
-        </h1>
-    </div>
-       
-    <div class="container">
-        <div class="flex justify-center gap-5">
-            <div class="card">
-              <div class="card-body">
-                <div class="carousel carousel-end rounded-box">
-                  <div class="carousel rounded-box w-96">
-                    <div class="carousel-item w-1/2">
-                      <img id="seblak" src="seblak-makaroni-1.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="bungeoppang" src="bungeoppang.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="ramyun" src="ramyun.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="sushi" src="sushi.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="teok" src="teokpoki.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="corn" src="cordog2.jpg" class="w-full" />
-                    </div> 
-                    <!-- <div class="carousel-item w-1/2">
-                      <img id="ice" src="ice.jpeg" class="w-full" />
-                    </div> -->
-                  </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">Menu</h2>
-                    <p>Serba Goceng</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Jelajahi Menu</button>
-                    </div>
-                </div>
-            </div>
+      <div class="card w-96 bg-base-100 shadow-xl">
+        <center>
+          <div class="carousel-item w-1/2">
+            <img id="minum" src="https://siplahtelkom.com/public/products/172580/3106810/lee-mineral-150.1638333186.jpg" class="w-full" />
+          </div>  
+        </center>
+      <div class="card-body">
+        <h2 class="card-title">
+          Lee Mineral
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <div class="card-actions justify-end">
+          <div class="btn btn-accent btn-active">Beli</div> 
+          <div class="btn btn-accent btn-active">Keranjang</div>
         </div>
+      </div>
     </div>
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <center>
+        <div class="carousel-item w-1/2">
+          <img id="seblak" src="https://cdn.idntimes.com/content-images/post/20171108/seblak-sultan-5e88fc7936847cac989d99bdcd58d499_600x400.jpg" class="w-full" />
+        </div>  
+      </center>
+    <div class="card-body">
+      <h2 class="card-title">
+        seblak
+        <div class="badge badge-secondary">NEW</div>
+      </h2>
+      <div class="card-actions justify-end">
+        <div class="btn btn-accent btn-active">Beli</div> 
+        <div class="btn btn-accent btn-active">Keranjang</div>
+      </div>
+    </div>
+  </div>
 
-   
+        </div>
+        <div class="container mx-auto">
+          <div class="flex justify-center gap-5">
+          <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="card-actions justify-end"></div>
+          </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <center>
+            <div class="carousel-item w-1/2">
+              <img id="kue" src="https://kimchimari.com/wp-content/uploads/2015/12/Bungeoppang_decorated_taiyaki.jpg" class="w-full" />
+            </div>  
+          </center>
+        <div class="card-body">
+          <h2 class="card-title">
+            Bungeoppang
+            <div class="badge badge-secondary">NEW</div>
+          </h2>
+          <div class="card-actions justify-end">
+            <div class="btn btn-accent btn-active">Beli</div> 
+            <div class="btn btn-accent btn-active">Keranjang</div>
+          </div>
+        </div>
+      </div>
+      <div class="card w-96 bg-base-100 shadow-xl">
+        <center>
+          <div class="carousel-item w-1/2">
+            <img id="cilok" src="https://whattocooktoday.com/wp-content/uploads/2020/11/cilok-17.jpg" class="w-full" />
+          </div>  
+        </center>
+      <div class="card-body">
+        <h2 class="card-title">
+          Cilok
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <div class="card-actions justify-end">
+          <div class="btn btn-accent btn-active">Beli</div> 
+          <div class="btn btn-accent btn-active">Keranjang</div>
+        </div>
+      </div>
+    </div>
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <center>
+        <div class="carousel-item w-1/2">
+          <img id="" src="https://4.bp.blogspot.com/-VSifP_YMl2g/WDXyYk_JukI/AAAAAAAAB5E/IsfQicQ4Uxs2Si72CO70bIVWQY0z5fQKQCLcB/s1600/images-42.jpg" class="w-full" />
+        </div>  
+      </center>
+    <div class="card-body">
+      <h2 class="card-title">
+       Mau pacaran?? siap-siap langsung saya cabut nyawamu
+        <div class="badge badge-secondary">NEW</div>
+      </h2>
+      <div class="card-actions justify-end">
+        <a href="beli.html"><div class="btn btn-accent btn-active">Beli</div> </a>
+        <a href="keranjang.html"><div class="btn btn-accent btn-active">Keranjang</div></a>
+      </div>
+    </div>
+  </div>
+    
 </body>
 </html>

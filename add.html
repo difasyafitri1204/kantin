@@ -14,9 +14,7 @@
         <div class="flex-1 px-2 mx-2">
           <div class="items-stretch hidden lg:flex">
               <div class="flex-1">
-                  <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>
-                  
-                   
+                  <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>     
               </div>
             </div>
         </div>
@@ -27,10 +25,12 @@
           <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
             Produk
           </a> 
+          <a class="btn btn-ghost btn-sm rounded-btn" href="logout.html">
+            Logout
+           </a> 
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
-                <!-- <img src="kantin.jpg" /> -->
               </div>
             </label>
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -66,7 +66,7 @@
                             <div>
                                 <label for="pictures">Link pictures Product</label>
                             </div>  
-                            <div>
+                            <div id="img">
                                 <input type="text" id="pictures" name="pictures" class="input input-primary input-bordered">
                             </div>
                             <div style="padding-top: 10px;">
@@ -75,14 +75,13 @@
                         </form>
                     </div>
                 </div>
-                <div class="card-body">
+                
                 <div class="grid grid-flow-col auto-cols-max">
                   <div id="List-Add"></div>
                   </div>   
                   <div class="card card-compact w-96 bg-base-100 shadow-xl">
                   </div>
-                  </div>
-            </div>
+                </div>
             </div>
         </div>
         <script src="add.js"></script>

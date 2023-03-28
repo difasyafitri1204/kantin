@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-    <title>Tambah Produk</title>   
+    <title>daftar</title>   
 </head>
 <body>
   <nav>
@@ -25,6 +25,9 @@
         <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
           Produk
         </a> 
+        <a class="btn btn-ghost btn-sm rounded-btn" href="consumer.html">
+            daftar pembeli
+        </a> 
         <a class="btn btn-ghost btn-sm rounded-btn" onclick="logout()" href="index.html">
           Logout
         </a> 
@@ -35,44 +38,48 @@
             <div class="flex justify-center gap-5">
                 <div class="card card-compact w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
-                        <form id="form-Add" action="" onsubmit="event.preventDefault(); saveAdd(this)" >
+                        <form id="form-Consumer" action="" onsubmit="event.preventDefault(); saveConsumer(this)" >
                             <input name="index" type="hidden" value="-1">
                             <div  style="padding-bottom: 10px;">
                                 <label for="names">
-                                    <span class="label-text">Nama produk</span>
+                                    <span class="label-text">Nama </span>
                                 </label>
                             </div>
                             <div>
                                 <input type="text" id="names" name="names" class="input input-primary input-bordered">
                             </div>
                             <div>
-                                <label for="price">Harga</label>
+                                <label for="class">Kelas</label>
                             </div>
                             <div>
-                                <input type="number" id="price" name="price" class="input input-primary input-bordered" >
+                                <input type="text" id="class" name="class" class="input input-primary input-bordered" >
                             </div>
                             <div>
-                                <label for="pictures">Link Gambar</label>
-                            </div>  
-                            <div id="img">
-                                <input type="text" id="pictures" name="pictures" class="input input-primary input-bordered">
+                                <label for="buy">pesan</label>
+                            </div>
+                            <div>
+                                <input type="text" id="buy" name="buy" class="input input-primary input-bordered" >
+                            </div>
+                            <div>
+                                <label for="date">tanggal</label>
+                            </div>
+                            <div>
+                                <input type="datetime-local" id="date" name="date" class="input input-primary input-bordered" >
                             </div>
                             <div style="padding-top: 10px;">
-                                <button id="btn-save-Add" class="btn btn-accent btn-active">save</button>
+                                <button id="btn-save-Consumer" class="btn btn-accent btn-active">save</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 
                 <!-- <div class="grid grid-flow-col auto-cols-max">
-                  </div>    -->
-                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                  <div id="List-Add"></div>
-                  </div>
-                </div>
-            </div>
+                </div>   
+                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <div id="List-Add"></div>
+                </div> -->
         </div>
-        <script src="add.js"></script>
+        <script src="Consumer.js"></script>
         <script src="logout.js"></script>
 </body>
 </html>

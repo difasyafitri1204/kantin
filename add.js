@@ -96,11 +96,8 @@ function saveAdd(form) {
         document.getElementById('btn-save-Add').innerHTML = 'Edit';
     }
     }
-
-    
-
     function copy(obj) {
         return JSON.parse(JSON.stringify(obj));
     }
-
+    
     ListAdd.showListAdd();

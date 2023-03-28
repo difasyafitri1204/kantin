@@ -1,91 +1,67 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="retro">
+<!DOCTYPE html >
+<html lang="en"  data-theme= "coffee">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-    <title>Tambah Produk</title>   
+    <title>Home</title>
 </head>
 <body>
   <nav>
-      <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
-        <div class="flex-1 px-2 mx-2">
-          <div class="items-stretch hidden lg:flex">
-              <div class="flex-1">
-                  <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>     
-              </div>
+    <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
+      <div class="flex-1 px-2 mx-2">
+        <div class="items-stretch hidden lg:flex">
+            <div class="flex-1">
+                <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>     
             </div>
-        </div>
-        <div class="flex-none">
-          <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
-            Home
-          </a> 
-          <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
-            Produk
-          </a> 
-          <a class="btn btn-ghost btn-sm rounded-btn" href="index.html">
-           Logout
-          </a> 
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-              <div class="w-10 rounded-full">
-              </div>
-            </label>
-            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                <a class="justify-between" href="profil.html"> Profile </a>
-              </li>
-              <li><a href="index.html">Logout</a></li>
-            </ul>
           </div>
       </div>
+      <div class="flex-none">
+        <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
+          Home
+        </a> 
+        <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
+          Produk
+        </a> 
+        <a class="btn btn-ghost btn-sm rounded-btn" href="consumer.html">
+          daftar pembeli
+        </a> 
+        <a class="btn btn-ghost btn-sm rounded-btn" onclick="logout()" href="index.html">
+          Logout
+        </a> 
     </div>
+  </div>
 </nav>
-    <div>
-        <h1>
-            <center>Selamat Datang</center>
-        </h1>
+<br>
+<div class="container mx-auto">
+  <div class="flex justify-center gap-5">
+    <div class="card w-96 bg-primary text-primary-content">
+      <div class="card-body">
+        <h2 class="card-title">2</h2>
+        <p>jumlah produk</p>
     </div>
-       
-    <div class="container">
-        <div class="flex justify-center gap-5">
-            <div class="card">
-              <div class="card-body">
-                <div class="carousel carousel-end rounded-box">
-                  <div class="carousel rounded-box w-96">
-                    <div class="carousel-item w-1/2">
-                      <img id="seblak" src="https://cdn.idntimes.com/content-images/post/20171108/seblak-sultan-5e88fc7936847cac989d99bdcd58d499_600x400.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="kue" src="https://kimchimari.com/wp-content/uploads/2015/12/Bungeoppang_decorated_taiyaki.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="cilok" src="https://whattocooktoday.com/wp-content/uploads/2020/11/cilok-17.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="baso" src="https://1.bp.blogspot.com/-HEJQTAE-yS8/UcOui67ZXKI/AAAAAAAAEFc/ZYmXr4u4sFc/s640/baksotenis1-2.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="mineral" src="https://siplahtelkom.com/public/products/172580/3106810/lee-mineral-150.1638333186.jpg" class="w-full" />
-                    </div> 
-                    <div class="carousel-item w-1/2">
-                      <img id="corn" src="gambar/somay.jpg" class="w-full" />
-                    </div> 
-                  </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">Menu</h2>
-                    <p>Serba Goceng</p>
-                    <div class="card-actions justify-end">
-                        <a href="product.html"><button class="btn btn-primary">Jelajahi Menu</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </div>
+  <div class="card w-96 bg-primary text-primary-content">
+    <div class="card-body">
+      <h2 class="card-title">1</h2>
+      <p>jumlah admin</p>
     </div>
-
-   
+  </div>
+  <div class="card w-96 bg-primary text-primary-content">
+    <div class="card-body">
+      <h2 class="card-title">Rp.</h2>
+      <p>pemasukan</p>
+    </div>
+  </div>
+  </div>
+</div>
+  <div class="grid grid-flow-col auto-cols-max">
+                </div>   
+                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <div id="List-Add"></div>
+                </div>
+                <script src="logout.js"></script>
 </body>
 </html>

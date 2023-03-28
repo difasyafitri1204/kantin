@@ -1,36 +1,18 @@
-// const dbAdd = {
-//     save(ListAdd2) {
-//         localStorage.setItem('ListAdd', JSON.stringify(ListAdd2));
-//     },
-//     get() {
-//         return JSON.parse(localStorage.getItem('ListAdd'));
-//     }
-// }
-
-// const ListHome = {
-//     showListHome: function() {
-//         this.ListAdd = dbAdd.get();
-//         const ListHome = document.getElementById('list-home');
-//             this.ListAdd.forEach((item) => {
-//             ListHome.innerHTML += `
-//             <div class="carousel-item w-1/2">
-//                 <img src="${item.pictures}" class="w-full">
-//             </div>`
-//         })
-//     }
-// }
-
-// ListHome.showListHome();
-function logout {
-    IndexLogout.logout();
-}
-const IndexLogout = {
-    logout: function() {
-        localStorage.removeItem("indexLogin");
+const consumer = {
+    showListConsumer: function() {
+        this.ListConsumer = dbConsumer.get();
+        const componentListConsumer = document.getElementById('List-Consumer');
+        componentListConsumer.innerHTML = '';
+        if (this.ListConsumer === null) {
+            console.log ('tidak memiliki data');
+        } else {
+                this.ListConsumer.forEach((Consumer, index) => {
+                componentListConsumer.innerHTML +=   `<h4><div class="flex justify-center gap-5">
+                <div class="grid grid-flow-col auto-cols-max">${Consumer.names} <br> ${Consumer.class}  <br> ${Consumer.buy} <br> ${Consumer.date}> <button 
+                class="btn btn-accent btn-active" onclick="ListConsumer.editConsumer(${index})">Edit</button><button 
+                class="btn btn-accent btn-active" onclick="ListConsumer.deleteConsumer(${index})"> delete </button></div></div></h4>`;;
+                });
+        }
+        
     }
 }
-// function copy(obj) {
-//     return JSON.parse(JSON.stringify(obj));
-// }
-
-// ListAdd.showListAdd();

@@ -12,56 +12,54 @@
   <nav>
     <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
       <div class="flex-1 px-2 mx-2">
-        <div class="items-stretch hidden lg:flex">
-            <div class="flex-1">
-                <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>     
-            </div>
+          <div class="items-stretch hidden lg:flex">
+              <div class="flex-1">
+                  <h1 >Kantin</h1>     
+              </div>
           </div>
       </div>
       <div class="flex-none">
         <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
           Home
         </a> 
-        <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
+        <a class="btn btn-ghost btn-sm rounded-btn" href="products.html">
           Produk
-        </a> 
-        <a class="btn btn-ghost btn-sm rounded-btn" href="consumer.html">
-          daftar pembeli
         </a> 
         <a class="btn btn-ghost btn-sm rounded-btn" onclick="logout()" href="index.html">
           Logout
         </a> 
+      </div>
     </div>
-  </div>
 </nav>
-<br>
-<div class="container mx-auto">
-  <div class="flex justify-center gap-5">
-    <div class="card w-96 bg-primary text-primary-content">
-      <div class="card-body">
-        <h2 class="card-title">2</h2>
-        <p>jumlah produk</p>
+      <center>
+        <h1 class="text-5xl font-bold">Selamat Datang Kembali</h1>
+      </center>
+    <br>
+    <div class="container mx-auto">
+      <div class="flex justify-center gap-5">
+        <div class="card w-96 bg-primary text-primary-content">
+            <div class="card-body">
+              <div style="padding-top: 10px;">
+                <a href="consumer.html"><button id="btn-save-home" class="btn glass" onclick="myProduct">transaksi</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card w-96 bg-primary text-primary-content">
+          <div class="card-body">
+            <h2>Jumlah Pelanggan</h2>
+            <p id="consumerNum"></p>
+          </div>
+        </div>
+        <div class="card w-96 bg-primary text-primary-content">
+          <div class="card-body">
+            <div style="padding-top: 10px;">
+              <a href="add.html"><button id="btn-save-home" class="btn glass" onclick="myProduct">Tambah Produk</button></a>
+          </div>
+        </div>
     </div>
-  </div>
-  <div class="card w-96 bg-primary text-primary-content">
-    <div class="card-body">
-      <h2 class="card-title">1</h2>
-      <p>jumlah admin</p>
-    </div>
-  </div>
-  <div class="card w-96 bg-primary text-primary-content">
-    <div class="card-body">
-      <h2 class="card-title">Rp.</h2>
-      <p>pemasukan</p>
-    </div>
-  </div>
   </div>
 </div>
-  <div class="grid grid-flow-col auto-cols-max">
-                </div>   
-                <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                <div id="List-Add"></div>
-                </div>
-                <script src="logout.js"></script>
+              <script src="home.js"></script>
+              <script src="logout.js"></script>
 </body>
 </html>

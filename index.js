@@ -19,7 +19,7 @@ const IndexLogin = {
         var pass = document.getElementById("password").value;
     
         if (user=="admin" && pass=="23maret"){
-            alert("Selamat anda berhasil login");
+            // alert("Selamat anda berhasil login");
             window.location.href="home.html";
         }else{
             alert("Username dan password anda salah!");

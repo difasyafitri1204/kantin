@@ -14,9 +14,15 @@ const ListAdd = {
             this.ListAdd.forEach((item) => {
             listOption.innerHTML += `
             <div class="container mx-auto">
-              <div class="flex justify-center gap-5"> 
-                  <div class="card card-compact w-96 bg-base-100 shadow-xl">${item.names}<br><img src="${item.pictures}" 
-                width= "200px" height="200px" ><br>${item.price} </div></div></div>`
+                <div class="flex justify-center gap-5"> 
+                    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                        ${item.names}<br>
+                        <img src="${item.pictures}" width= "200px" height="200px" ><br> 
+                        Rp.${item.price}<br> 
+                        ------------------------------------------------------<br>
+                    </div>
+                </div>
+            </div>`
         })
     }
 }

@@ -1,13 +1,14 @@
-<!DOCTYPE html >
-<html lang="en"  data-theme= "coffee">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-    <title>Home</title>
-</head>
+<!DOCTYPE html>
+<html lang="en" data-theme="coffee">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <title>home</title>
+    </head>
 <body>
   <nav>
     <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
@@ -25,6 +26,9 @@
         <a class="btn btn-ghost btn-sm rounded-btn" href="products.html">
           Produk
         </a> 
+        <a class="btn btn-ghost btn-sm rounded-btn" href="transaction.html">
+          transaksi
+        </a> 
         <a class="btn btn-ghost btn-sm rounded-btn" onclick="logout()" href="index.html">
           Logout
         </a> 
@@ -40,7 +44,7 @@
         <div class="card w-96 bg-primary text-primary-content">
             <div class="card-body">
               <div style="padding-top: 10px;">
-                <a href="consumer.html"><button id="btn-save-home" class="btn glass" onclick="myProduct">transaksi</button></a>
+                <a href="consumer.html"><button id="btn-save-home" class="btn glass" >Daftar Pembeli</button></a>
             </div>
           </div>
         </div>
@@ -52,8 +56,8 @@
         </div>
         <div class="card w-96 bg-primary text-primary-content">
           <div class="card-body">
-            <div style="padding-top: 10px;">
-              <a href="add.html"><button id="btn-save-home" class="btn glass" onclick="myProduct">Tambah Produk</button></a>
+            <h2>Jumlah Poduk</h2>
+            <p id="numProduct"></p>
           </div>
         </div>
     </div>

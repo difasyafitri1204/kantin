@@ -23,7 +23,7 @@
                 <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
                   Home
                 </a> 
-                <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
+                <a class="btn btn-ghost btn-sm rounded-btn" href="products.html">
                   Produk
                 </a> 
                 <a class="btn btn-ghost btn-sm rounded-btn" href="transaction.html">
@@ -37,88 +37,95 @@
         </nav>
         <div class="container mx-auto">
             <div class="flex justify-center gap-5">
-                <div class="card w-96 glass">
-                    <div class="card-body">
-                        <h2 class="card-title">Transaksi Penjualan</h2>
-                        <p>
-                            <form id="form-transaction" action="" onsubmit="event.preventDefault(); addTransaction(this)">
-                                <input type="hidden" name="index" value="-1">
-                                <div class="form-control w-full max-w-xs">
-                                    <div>
-                                        <label for="consumer" class="label">Konsumen</label>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <div style="padding-top: 10px;">
+                        <div class="card-body">
+                            <h2 class="card-title">Transaksi Penjualan</h2>
+                            <p>
+                                <form id="form-transaction" action="" onsubmit="event.preventDefault(); addTransaction(this)">
+                                    <input type="hidden" name="index" value="-1">
+                                    <div class="form-control w-full max-w-xs">
+                                        <div>
+                                            <label for="consumer" class="label">Konsumen</label>
+                                        </div>
+                                        <div>
+                                            <select class="select select-primary w-full max-w-xs" id="consumer" > <option value="">pilih Konsumen</option></select>
+                                        </div>
                                     </div>
                                     <div>
-                                        <select id="consumer" name="consumer" class="select select-primary w-full max-w-xs select-sm">
-                                            <option>Pilih Konsumen</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="name" class="label">Nama Produk</label>
+                                        <div>
+                                            <label for="class" class="label">kelas</label>
+                                        </div>
+                                        <div>
+                                            <input type="text" id="class" name="class" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly>
+                                        </div>
                                     </div>
                                     <div>
-                                        <input type="text" id="name" name="name" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="price" class="label">Harga Produk</label>
-                                    </div>
-                                    <div>
-                                        <input type="number" id="price" name="price" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly onkeyup="countTotalPrice()">
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div>
-                                        <label for="image" class="label">Link Gambar Produk</label>
+                                        <div>
+                                            <label for="buy" class="label">pesan</label>
+                                        </div>
+                                        <div>
+                                            <input type="text" id="buy" name="buy" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly>
+                                        </div>
                                     </div>
                                     <div>
-                                        <input type="text" id="image" name="image" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="sum" class="label">Jumlah</label>
-                                    </div>
-                                    <div>
-                                        <input type="number" id="sum" name="sum" class="input input-bordered input-primary file-input-sm w-full max-w-xs" onkeyup="countTotalPrice()">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="total" class="label">Total Harga</label>
+                                        <div>
+                                            <label for="price" class="label">Harga Produk</label>
+                                        </div>
+                                        <div>
+                                            <input type="number" id="price" name="price" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly onkeyup="countTotalPrice()">
+                                        </div>
                                     </div>
                                     <div>
-                                        <input type="number" id="total" name="total" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly onkeyup="countTotalPrice()">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="cash" class="label">Tunai</label>
-                                    </div>
-                                    <div>
-                                        <input type="number" id="cash" name="cash" class="input input-bordered input-primary file-input-sm w-full max-w-xs" onkeyup="countTotalPrice()">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="change" class="label">Kembalian</label>
+                                        <div>
+                                            <label for="sum" class="label">Jumlah</label>
+                                        </div>
+                                        <div>
+                                            <input type="number" id="sum" name="sum" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly onkeyup="countTotalPrice()">
+                                        </div>
                                     </div>
                                     <div>
-                                        <input type="number" id="change" name="change" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly>
+                                        <div>
+                                            <label for="total" class="label">Total Harga</label>
+                                        </div>
+                                        <div>
+                                            <input type="number" id="total" name="total" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly onkeyup="countTotalPrice()">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card-actions justify-end">
-                                    <button id="btn-save-transaction" class="btn btn-primary mt-2 btn-sm">Simpan</button>
-                                </div>
-                            </form>
-                        </p>
+                                    <div>
+                                        <div>
+                                            <label for="cash" class="label">Tunai</label>
+                                        </div>
+                                        <div>
+                                            <input type="number" id="cash" name="cash" class="input input-bordered input-primary file-input-sm w-full max-w-xs" onkeyup="countTotalPrice()">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <label for="change" class="label">Kembalian</label>
+                                        </div>
+                                        <div>
+                                            <input type="number" id="change" name="change" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <label for="date" class="label">tanggal</label>
+                                        </div>
+                                        <div>
+                                            <input type="date" id="date" name="date" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="card-actions justify-end">
+                                        <button id="btn-save-transaction" class="btn btn-primary mt-2 btn-sm">Simpan</button>
+                                    </div>
+                                </form>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="card w-96 glass">
+                <div class="card w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title">History Penjualan</h2>
                         <p>

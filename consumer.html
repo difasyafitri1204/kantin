@@ -1,85 +1,119 @@
 <!DOCTYPE html>
-<html lang="en" data-theme= "coffee">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-    <title>daftar</title>   
-</head>
+<html lang="en" data-theme="coffee">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <title>pembeli</title>
+    </head>
 <body>
-  <nav>
-    <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
-      <div class="flex-1 px-2 mx-2">
-        <div class="items-stretch hidden lg:flex">
-            <div class="flex-1">
-                <h1 class="btn btn-ghost normal-case text-xl">Kantin</h1>     
-            </div>
+    <div class="container-fluid">
+      <nav>
+        <div class="navbar mb-2 shadow-lg  bg-neutral text-neutral-content rounded-box">
+          <div class="flex-1 px-2 mx-2">
+              <div class="items-stretch hidden lg:flex">
+                  <div class="flex-1">
+                      <h1 >Kantin</h1>     
+                  </div>
+              </div>
           </div>
-      </div>
-      <div class="flex-none">
-        <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
-          Home
-        </a> 
-        <a class="btn btn-ghost btn-sm rounded-btn" href="product.html">
-          Produk
-        </a> 
-        <a class="btn btn-ghost btn-sm rounded-btn" href="consumer.html">
-            daftar pembeli
-        </a> 
-        <a class="btn btn-ghost btn-sm rounded-btn" onclick="logout()" href="index.html">
-          Logout
-        </a> 
-    </div>
-  </div>
-</nav>
+          <div class="flex-none">
+            <a class="btn btn-ghost btn-sm rounded-btn" href="home.html">
+              Home
+            </a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" href="products.html">
+              Produk
+            </a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" href="transaction.html">
+              transaksi
+            </a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" onclick="logout()" href="index.html">
+              Logout
+            </a> 
+          </div>
+        </div>
+    </nav>
         <div class="container mx-auto">
             <div class="flex justify-center gap-5">
                 <div class="card card-compact w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
-                        <form id="form-Consumer" action="" onsubmit="event.preventDefault(); saveConsumer(this)" >
-                            <input name="index" type="hidden" value="-1">
-                            <div  style="padding-bottom: 10px;">
-                                <label for="names">
-                                    <span class="label-text">Nama </span>
-                                </label>
+                      <form id="form-Consumer" action="" onsubmit="event.preventDefault(); saveConsumer(this)">
+                        <input type="hidden" name="index" value="-1">
+                        <div>
+                          <div>
+                              <label for="names" class="label">nama</label>
+                          </div>
+                          <div>
+                              <input type="text" id="names" name="names" class="input input-bordered input-primary file-input-sm w-full max-w-xs">
+                          </div>
+                        </div>
+                        <div>
+                          <div>
+                              <label for="class" class="label">kelas</label>
+                          </div>
+                          <div>
+                              <input type="text" id="class" name="class" class="input input-bordered input-primary file-input-sm w-full max-w-xs">
+                          </div>
+                        </div>
+                        <div class="form-control w-full max-w-xs">
+                            <div>
+                                <label for="buy" class="label">pesan</label>
                             </div>
                             <div>
-                                <input type="text" id="names" name="names" class="input input-primary input-bordered">
+                                <select class="select select-primary w-full max-w-xs" id="buy" name="buy"> <option value="">pilih Menu</option></select>
                             </div>
-                            <div>
-                                <label for="class">Kelas</label>
-                            </div>
-                            <div>
-                                <input type="text" id="class" name="class" class="input input-primary input-bordered" >
-                            </div>
-                            <div>
-                                <label for="buy">pesan</label>
-                            </div>
-                            <div>
-                                <input type="text" id="buy" name="buy" class="input input-primary input-bordered" >
-                            </div>
-                            <div>
-                                <label for="date">tanggal</label>
-                            </div>
-                            <div>
-                                <input type="datetime-local" id="date" name="date" class="input input-primary input-bordered" >
-                            </div>
+                        </div>
+                        <div>
+                          <div>
+                              <label for="price" class="label">harga</label>
+                          </div>
+                          <div>
+                              <input type="number" id="price" name="price" class="input input-bordered input-primary file-input-sm w-full max-w-xs"  readonly onkeyup="countTotalPrice()">
+                          </div>
+                        </div>
+                        <div>
+                          <div>
+                              <label for="sum" class="label">jumlah porsi</label>
+                          </div>
+                          <div>
+                              <input type="number" id="sum" name="sum" class="input input-bordered input-primary file-input-sm w-full max-w-xs" onkeyup="countTotalPrice()">
+                          </div>
+                        </div>
+                        <div>
+                          <div>
+                              <label for="total" class="label">total harga</label>
+                          </div>
+                          <div>
+                              <input type="number" id="total" name="total" class="input input-bordered input-primary file-input-sm w-full max-w-xs" readonly onkeyup="countTotalPrice()">
+                          </div>
+                        </div>
+                        <div>
+                          <div>
+                              <label for="date" class="label">date</label>
+                          </div>
+                          <div>
+                              <input type="date" id="date" name="date" class="input input-bordered input-primary file-input-sm w-full max-w-xs">
+                          </div>
+                        </div>
                             <div style="padding-top: 10px;">
                                 <button id="btn-save-Consumer" class="btn btn-accent btn-active">save</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                
-                <!-- <div class="grid grid-flow-col auto-cols-max">
-                </div>   
-                <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                <div id="List-Add"></div>
-                </div> -->
+                    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <div id="List-Consumer"></div>
+                        </div>
+                    </div>
+            </div>
         </div>
-        <script src="Consumer.js"></script>
-        <script src="logout.js"></script>
+            
+       
+    
+    <script type="text/javascript" src="consumer.js"></script>
 </body>
 </html>

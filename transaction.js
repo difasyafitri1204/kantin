@@ -30,16 +30,18 @@ const dbConsumer = {
     }
 }
 $('#consumer').on('change', function(){
-    const names = $('#consumer option:selected').data('names');
     const kelas = $('#consumer option:selected').data('class');
     const buy = $('#consumer option:selected').data('buy');
     const price = $('#consumer option:selected').data('price');
+    const sum = $('#consumer option:selected').data('sum');
+    const total = $('#consumer option:selected').data('total');
     const date = $('#consumer option:selected').data('date');
     
-    $('[name=names]').val(names);
     $('[name=class]').val(kelas);
     $('[name=buy]').val(buy);
+    $('[name=sum').val(sum);
     $('[name=price]').val(price);
+    $('[name=total]').val(total);
     $('[name=date]').val(date);
   });
 
@@ -49,7 +51,7 @@ const chooseConsumer = {
         this.ListConsumer = dbConsumer.get();
         const listOption = document.getElementById('consumer');
         this.ListConsumer.forEach((item) => {
-            listOption.innerHTML += `<option data-names="${item.names}" data-class="${item.class}" data-buy="${item.buy}" data-price="${item.price}" data-date="${item.date}" </option>`
+            listOption.innerHTML += `<option data-class="${item.class}" data-buy="${item.buy}" data-price="${item.price}" data-date="${item.date}" data-sum= "${item.sum}" data-total= "${item.total}">${item.names} </option>`
         })
     },
 }
@@ -58,11 +60,10 @@ const saleTransaction = {
     transaction: {
         index: -1,
         consumer: null,
-        product: null,
-        name: null,
+        date: null,
+        class:null,
+        buy: null,
         price: null,
-        stock: null,
-        image: null,
         sum: null,
         total: null,
         cash: null,
@@ -72,11 +73,10 @@ const saleTransaction = {
     inputTransaction: function (form) {
         this.transaction.index = form.index.value;
         this.transaction.consumer = form.consumer.value;
-        this.transaction.product = form.product.value;
-        this.transaction.name = form.name.value;
+        this.transaction.date = form.date.value;
+        this.transaction.class = form.class.value;
+        this.transaction.buy = form.buy.value;
         this.transaction.price = form.price.value;
-        this.transaction.stock = form.stock.value;
-        this.transaction.image = form.image.value;
         this.transaction.sum = form.sum.value;
         this.transaction.total = form.total.value;
         this.transaction.cash = form.cash.value;
@@ -87,24 +87,8 @@ const saleTransaction = {
             alert('Konsumen tidak boleh kosong!');
             return false;
         }
-        if(!this.transaction.product) {
-            alert('Produk tidak boleh kosong!');
-            return false;
-        }
-        if(!this.transaction.name) {
-            alert('Nama produk tidak boleh kosong!');
-            return false;
-        }
         if(!this.transaction.price) {
             alert('harga produk tidak boleh kosong!');
-            return false;
-        }
-        if(!this.transaction.stock) {
-            alert('Stok produk tidak boleh kosong!');
-            return false;
-        }
-        if(!this.transaction.image) {
-            alert('Link gambar produk tidak boleh kosong!');
             return false;
         }
         if(!this.transaction.sum) {
@@ -136,11 +120,8 @@ const saleTransaction = {
     resetFormTransaction (form) {
         this.transaction.index = -1;
         this.transaction.consumer = null;
-        this.transaction.product = null;
-        this.transaction.name = null;
+        this.transaction.date = null;
         this.transaction.price = null;
-        this.transaction.stock = null;
-        this.transaction.image = null;
         this.transaction.sum = null;
         this.transaction.total = null;
         this.transaction.cash = null;
@@ -148,11 +129,10 @@ const saleTransaction = {
 
         form.index.value = this.transaction.index;
         form.consumer.value = this.transaction.consumer;
-        form.product.value = this.transaction.product;
-        form.name.value = this.transaction.name;
-        form.price.value = this.transaction.price
-        form.stock.value = this.transaction.stock;
-        form.image.value = this.transaction.image;
+        form.date.value = this.transaction.date;
+        form.class.value = this.transaction.class;
+        form.buy.value = this.transaction.buy;
+        form.price.value = this.transaction.price;
         form.sum.value = this.transaction.sum;
         form.total.value = this.transaction.total;
         form.cash.value = this.transaction.cash;
@@ -167,20 +147,20 @@ const saleTransaction = {
         } else {
             this.transactionList.forEach((transaction, index) => {
                 componentTransactionList.innerHTML += 
-                    `<div class="flex justify-between">
-                        <div>
-                            ${transaction.consumer} <br>
-                            ${transaction.name} <br> 
-                            ${transaction.price} <br> 
-                            Stok: ${transaction.stock} <br> 
-                            Jumlah: ${transaction.sum} <br> 
-                            Total Harga: ${transaction.total} <br> 
-                            Tunai: ${transaction.cash} <br> 
-                            Kembalian: ${transaction.change} <br> 
-                            ------------------ <br>
-                        </div>
-                        <div>
-                            <img src="${transaction.image}" width="110px" height="110px"> <br>
+                    `<div class="container mx-auto">
+                        <div class="flex justify-center gap-5"> 
+                            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                                nama: ${transaction.consumer} <br>
+                                pesan: ${transaction.buy}<br>
+                                kelas: ${transaction.class}<br>
+                                harga: ${transaction.price} <br> 
+                                Jumlah: ${transaction.sum} <br> 
+                                Total Harga: ${transaction.total} <br> 
+                                Tunai: ${transaction.cash} <br> 
+                                Kembalian: ${transaction.change} <br> 
+                                tanggal pemesanan: ${transaction.date}
+                                <br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            </div>
                         </div>
                     </div>`;
             });
@@ -209,5 +189,4 @@ function copy(obj) {
 }
 
 saleTransaction.showSaleHistory();
-chooseConsumer.showConsumerList();
-chooseProduct.showProductList();
+chooseConsumer.showConsumer();

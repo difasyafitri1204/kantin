@@ -1,5 +1,5 @@
 function saveAdd(form) {
-    console.log(form);ghg
+    console.log(form);
     ListAdd.inputAdd(form);
     ListAdd.showListAdd();
     }

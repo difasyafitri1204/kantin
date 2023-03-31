@@ -1,7 +1,3 @@
-function saveLogin() {
-    IndexLogin.saveLogin();
-}
-
 const dbLogin = {
     save(IndexLogin2) {
         localStorage.setItem('IndexLogin', JSON.stringify(IndexLogin2));
@@ -10,20 +6,18 @@ const dbLogin = {
         return JSON.parse(localStorage.getItem('IndexLogin'));
     }
 }
-const IndexLogin = {
-    Login: {
-        index: true
-    },
-    saveLogin: function (){ 
-        var user = document.getElementById("user").value;
-        var pass = document.getElementById("password").value;
-    
-        if (user=="admin" && pass=="23maret"){
-            // alert("Selamat anda berhasil login");
-            window.location.href="home.html";
-        }else{
-            alert("Username dan password anda salah!");
+function logout(){
+    IndexLogout.logout();
+}
+const IndexLogout = {
+    begin: function(){
+        this.Login = dbLogin.get();
+        if(!this.Login) {
+            window.location.href="index.html";  
         }
-        dbLogin.save(this.Login);
+    },
+    logout: function() {
+        localStorage.removeItem('IndexLogin');
     }
 }
+IndexLogout.begin()

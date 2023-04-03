@@ -118,11 +118,27 @@ const chooseMenu = {
                 console.log ('tidak memiliki data');
             } else {
                     this.ListConsumer.forEach((Consumer, index) => {
-                    componentListConsumer.innerHTML +=   `<h4><div class="flex justify-center gap-5">
-                    <div class="grid grid-flow-col auto-cols-max">${Consumer.names} <br> ${Consumer.class}  <br> ${Consumer.buy} 
-                    <br> ${Consumer.price} <br> ${Consumer.sum}<br>${Consumer.total} <br>${Consumer.date} <button 
-                    class="btn btn-accent btn-active" onclick="ListConsumer.editConsumer(${index})">Edit</button><button 
-                    class="btn btn-accent btn-active" onclick="ListConsumer.deleteConsumer(${index})"> delete </button></div></div></h4>`;
+                    componentListConsumer.innerHTML +=   
+                    `<h4>
+                            <div class="flex justify-center gap-5">
+                                <div class="grid grid-flow-col auto-cols-max">
+                                    Nama :${Consumer.names}
+                                    <br> Kelas : ${Consumer.class} 
+                                    <br> Pesan : ${Consumer.buy} 
+                                    <br> Harga : ${Consumer.price} 
+                                    <br> Jumlah : ${Consumer.sum}
+                                    <br> Total : ${Consumer.total} 
+                                    <br> Tanggal : ${Consumer.date} 
+                                    <button class="btn btn-accent btn-active" 
+                                    onclick="ListConsumer.editConsumer(${index})">Edit
+                                    </button>
+                                    <button class="btn btn-accent btn-active" 
+                                    onclick="ListConsumer.deleteConsumer(${index})"> Delete 
+                                    </button>
+                                </div>
+                            </div>
+                        <br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    </h4>`;
                     });
             }
             

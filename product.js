@@ -16,10 +16,11 @@ const ListAdd = {
             <div class="container mx-auto">
                 <div class="flex justify-center gap-5"> 
                     <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                        ${item.names}<br>
-                        <img src="${item.pictures}" width= "200px" height="200px" ><br> 
-                        Rp.${item.price}<br> 
-                        ------------------------------------------------------<br>
+                        <b>${item.names}</b>
+                        <br><img src="${item.pictures}"
+                        width= "200px" height="200px" >
+                        <br> Rp.${item.price}
+                        <br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     </div>
                 </div>
             </div>`

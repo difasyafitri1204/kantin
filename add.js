@@ -69,10 +69,21 @@ function saveAdd(form) {
                 console.log ('tidak memiliki data');
             } else {
                     this.ListAdd.forEach((Add, index) => {
-                    componentListAdd.innerHTML +=   `<h4><div class="flex justify-center gap-5">
-                    <div class="grid grid-flow-col auto-cols-max">${Add.names} <br> ${Add.price}  <br> <img src="${Add.pictures}" width= "100px"><button 
-                    class="btn btn-accent btn-active" onclick="ListAdd.editAdd(${index})">Edit</button><button 
-                    class="btn btn-accent btn-active" onclick="ListAdd.deleteAdd(${index})"> delete </button></div></div></h4>`;;
+                    componentListAdd.innerHTML +=   `
+                    <h4>
+                            <div class="flex justify-center gap-5">
+                                <div class="grid grid-flow-col auto-cols-max">
+                                    ${Add.names} 
+                                    <br> ${Add.price}  
+                                    <br> <img src="${Add.pictures}" width= "100px">
+                                    <button class="btn btn-accent btn-active" 
+                                    onclick="ListAdd.editAdd(${index})">Edit</button>
+                                    <button class="btn btn-accent btn-active" 
+                                    onclick="ListAdd.deleteAdd(${index})"> delete </button>
+                                </div>
+                            </div>
+                        <br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    </h4>`;
                     });
             }
             
